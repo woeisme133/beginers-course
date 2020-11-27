@@ -1,0 +1,16 @@
+title: beginers
+description: beginers
+template:
+  repo: beginers-template
+  name: beginers
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
